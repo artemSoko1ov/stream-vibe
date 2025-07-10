@@ -8,7 +8,7 @@ const Button = (props) => {
     type = "button",
     href,
     target,
-    // defaulr | transparent
+    // defaulr | transparent | 'black-10
     mode='',
     label,
     isLabelHidden = false,
