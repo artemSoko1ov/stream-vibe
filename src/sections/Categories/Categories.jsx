@@ -1,55 +1,59 @@
 import Section from "@/layouts/Section"
 import "./Categories.scss"
 import CategoryCard from "@/components/CategoryCard"
+import Slider from "@/components/Slider"
+import SliderNavigation from "@/components/Slider/components/SliderNavigation"
 
 const Categories = () => {
   const categoryItems = [
     {
-      title: 'Action',
+      title: "Action",
       images: [
-        '/src/assets/images/categories/action/1.jpg',
-        '/src/assets/images/categories/action/2.jpg',
-        '/src/assets/images/categories/action/3.jpg',
-        '/src/assets/images/categories/action/4.jpg',
+        "/src/assets/images/categories/action/1.jpg",
+        "/src/assets/images/categories/action/2.jpg",
+        "/src/assets/images/categories/action/3.jpg",
+        "/src/assets/images/categories/action/4.jpg",
       ],
     },
     {
-      title: 'Adventure',
+      title: "Adventure",
       images: [
-        '/src/assets/images/categories/adventure/1.jpg',
-        '/src/assets/images/categories/adventure/2.jpg',
-        '/src/assets/images/categories/adventure/3.jpg',
-        '/src/assets/images/categories/adventure/4.jpg',
+        "/src/assets/images/categories/adventure/1.jpg",
+        "/src/assets/images/categories/adventure/2.jpg",
+        "/src/assets/images/categories/adventure/3.jpg",
+        "/src/assets/images/categories/adventure/4.jpg",
       ],
     },
     {
-      title: 'Comedy',
+      title: "Comedy",
       images: [
-        '/src/assets/images/categories/comedy/1.jpg',
-        '/src/assets/images/categories/comedy/2.jpg',
-        '/src/assets/images/categories/comedy/3.jpg',
-        '/src/assets/images/categories/comedy/4.jpg',
+        "/src/assets/images/categories/comedy/1.jpg",
+        "/src/assets/images/categories/comedy/2.jpg",
+        "/src/assets/images/categories/comedy/3.jpg",
+        "/src/assets/images/categories/comedy/4.jpg",
       ],
     },
     {
-      title: 'Drama',
+      title: "Drama",
       images: [
-        '/src/assets/images/categories/drama/1.jpg',
-        '/src/assets/images/categories/drama/2.jpg',
-        '/src/assets/images/categories/drama/3.jpg',
-        '/src/assets/images/categories/drama/4.jpg',
+        "/src/assets/images/categories/drama/1.jpg",
+        "/src/assets/images/categories/drama/2.jpg",
+        "/src/assets/images/categories/drama/3.jpg",
+        "/src/assets/images/categories/drama/4.jpg",
       ],
     },
     {
-      title: 'Horror',
+      title: "Horror",
       images: [
-        '/src/assets/images/categories/horror/1.jpg',
-        './src/assets/images/categories/horror/2.jpg',
-        './src/assets/images/categories/horror/3.jpg',
-        './src/assets/images/categories/horror/4.jpg',
+        "/src/assets/images/categories/horror/1.jpg",
+        "./src/assets/images/categories/horror/2.jpg",
+        "./src/assets/images/categories/horror/3.jpg",
+        "./src/assets/images/categories/horror/4.jpg",
       ],
     },
   ]
+
+  const sliderNavigationId = 'categories-slider-navigation'
 
   return (
     <Section
@@ -57,19 +61,20 @@ const Categories = () => {
       titleId="categories-title"
       description="Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"
       actions={
-        <div>
-          <button>Назад</button>
-          <button>Вперед</button>
-        </div>
+        <SliderNavigation 
+        mode='tile'
+        id={sliderNavigationId}
+        />
       }
       isActionsHiddenOnMobile
     >
-      {categoryItems.map((categoryItem, index) =>(
-        <CategoryCard 
-          {...categoryItem}
-          key={index}
-        />
-      ))}
+      <Slider
+        navigationTargetElementId={sliderNavigationId}
+      >
+        {categoryItems.map((categoryItem, index) => (
+          <CategoryCard {...categoryItem} key={index} />
+        ))}
+      </Slider>
     </Section>
   )
 }
