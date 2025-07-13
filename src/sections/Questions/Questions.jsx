@@ -1,3 +1,4 @@
+import Accordion from "@/components/Accordion"
 import AccordionGroup from "@/components/AccordionGroup"
 import Button from "@/components/Button"
 import Section from "@/layouts/Section"
@@ -22,7 +23,17 @@ const Questions = () =>{
             actions={(<Button label="Ask a Question" href="/support" />)}
         >
             <AccordionGroup columns={2}>
-                {questionItems}
+                {questionItems.map((question, index) => (
+                    <Accordion
+                    title={question}
+                    id={`question-${index}`}
+                    name="questions"
+                    isOpen={index === 0}
+                    key={index}
+                    >
+                        <p>StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
+                    </Accordion>
+                ))}
             </AccordionGroup>
         </Section>
     )
