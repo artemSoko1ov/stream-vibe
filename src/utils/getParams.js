@@ -1,11 +1,11 @@
-import getAttrNameFromSelector from "./getAttrNameFromSelector"
+import getAttrNameFromSelector from '@/utils/getAttrNameFromSelector'
 
 const getParams = (element, dataAttrSelector) => {
-    return JSON.parse(
-        element.getAttribute(
-            getAttrNameFromSelector(dataAttrSelector)
-        )
+  return JSON.parse(
+    element.getAttribute(
+      getAttrNameFromSelector(dataAttrSelector)
     )
+  )
 }
 
 export default getParams

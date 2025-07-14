@@ -1,5 +1,5 @@
-const getIdFromTitle = (title) =>{
-    return title
+const getIdFromTitle = (title) => {
+  return title
     .toLocaleLowerCase()
     .replaceAll(' ', '-')
 }
