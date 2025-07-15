@@ -8,7 +8,7 @@ const planGroups = [
                 description: 'Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles.',
                 price: {
                     value: '$9.99',
-                    label: 'month',
+                    label: '/month',
                 },
             },
             {
@@ -16,7 +16,7 @@ const planGroups = [
                 description: 'Access to a wider selection of movies and shows, including most new releases and exclusive content',
                 price: {
                     value: '$12.99',
-                    label: 'month',
+                    label: '/month',
                 },
             },
             {
