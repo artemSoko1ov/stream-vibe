@@ -21,7 +21,7 @@ const Socials = (props) =>{
                     <li className="soc1als__item" key={index}>
                         <Button 
                             className="soc1als__link"
-                            mode="black_10"
+                            mode="black-10"
                             href="/"
                             target="_blank"
                             label={label}
