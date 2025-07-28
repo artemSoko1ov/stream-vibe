@@ -27,7 +27,7 @@ const Badge = (props) => {
                 <Icon 
                     className='badge__icon'
                     name={iconName}
-                    hasFil={hasFillIcon}
+                    hasFill={hasFillIcon}
                     ariaLabel={iconAriaLabel}
                 />)}
             <span>{children}</span>
