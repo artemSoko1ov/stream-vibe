@@ -1,11 +1,13 @@
 import Accordion from '../Accordion'
 import AccordionGroup from '../AccordionGroup'
+import EpisodeCard from '../EpisodeCard'
 import seasonItems from './seasonItems'
 import './Seasons.scss'
 
 const Seasons = () => {
     return (
         <AccordionGroup
+        className='seasons'
         mode='dark'
         isOrderedList={false}
         >
@@ -20,7 +22,13 @@ const Seasons = () => {
                     key={index}
                     isArrowButton
                 >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, eligendi.
+                    <ul className="season__list">
+                        {episodes.map((episode, index)=>(
+                            <li className="seasons__item" key={index}>
+                                <EpisodeCard {...episode}/>
+                            </li>
+                        ))}
+                    </ul>
                 </Accordion>
             ))}
         </AccordionGroup>
