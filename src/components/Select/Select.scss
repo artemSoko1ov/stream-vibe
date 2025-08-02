@@ -1,6 +1,6 @@
 .select {
-  --selectButtonArrowIconUrl: url("../../assets/images/select/arrow-down_gray.svg");
-  --selectButtonIconSize: #{fluid-to-laptop(24, 20)};
+  --selectButtonArrowIconUrl: url('../../assets/images/select/arrow-down_gray.svg');
+  --selectButtonArrowIconSize: #{fluid-to-laptop(24, 20)};
   --selectButtonGapX: #{fluid-to-laptop(6, 4)};
   --selectButtonPaddingX: #{fluid-to-laptop(12, 8)};
 
@@ -8,26 +8,27 @@
 
   &__original-control,
   &__button {
-    min-height: 94px;
+    min-width: 94px;
   }
+
   &__original-control {
     appearance: none;
     padding-left: var(--selectButtonPaddingX);
     padding-right: calc(
-      var(--selectButtonIconSize) + var(--selectButtonPaddingX) +
-        var(--selectButtonGapX)
+      var(--selectButtonArrowIconSize)
+      + var(--selectButtonPaddingX)
+      + var(--selectButtonGapX)
     );
     background-image: var(--selectButtonArrowIconUrl);
     background-position: calc(100% - var(--selectButtonPaddingX)) 50%;
-    background-size: var(--selectButtonIconSize);
+    background-size: var(--selectButtonArrowIconSize);
     background-repeat: no-repeat;
 
     @include mobile-above {
-        @include visually-hidden;
+      @include visually-hidden;
     }
 
     &:disabled {
-      &,
       & + .select__body {
         @include disabled;
 
@@ -60,15 +61,16 @@
     padding-inline: var(--selectButtonPaddingX);
     transition-duration: var(--transition-duration);
 
-    @include mobile{
-        @include visually-hidden;
+    @include mobile {
+      @include visually-hidden;
     }
 
     &::after {
-      @include square(var(--selectButtonArrowIconUrl));
+      @include square(var(--selectButtonArrowIconSize));
 
-      content: "";
-      background: var(--selectButtonArrowIconUrl) center/contain no-repeat;
+      content: '';
+      background:
+        var(--selectButtonArrowIconUrl) center/contain no-repeat;
       transition-duration: inherit;
     }
 
@@ -84,7 +86,7 @@
     top: calc(100% + 4px);
     display: grid;
     row-gap: 4px;
-    min-height: 300px;
+    min-width: 300px;
     max-height: 250px;
     overflow-y: auto;
     overscroll-behavior: none;
@@ -98,13 +100,14 @@
       left: 0;
       transform-origin: 0 0;
     }
+
     &.is-on-the-right-side {
       right: 0;
       transform-origin: 100% 0;
     }
 
     &:not(.is-expanded) {
-      @include hode;
+      @include hide;
 
       scale: 0;
     }
@@ -128,7 +131,7 @@
       color: var(--color-white);
 
       &::after {
-        content: "✓";
+        content: '✔';
       }
     }
 
