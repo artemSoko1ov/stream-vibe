@@ -7,12 +7,13 @@
   &__label {
     font-size: fluid-to-laptop(18, 16);
     font-weight: 600;
-    color: var(--color-white);
+    color: var(--colo-white);
   }
 
   &__required-star {
     color: var(--color-red-45);
   }
+
   &__body {
     display: flex;
     column-gap: fluid-to-laptop(16, 12);
@@ -22,7 +23,7 @@
   &__control {
     width: 100%;
     height: fluid-to-laptop(67, 53);
-    padding-inline: fluidto-laptop(20, 16);
+    padding-inline: fluid-to-laptop(20, 16);
     color: var(--color-white);
     background-color: var(--color-black-08);
     border: var(--border);
