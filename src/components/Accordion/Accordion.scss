@@ -57,7 +57,7 @@
     &::after {
       @include abs-y;
 
-      content: '';
+      content: "";
       right: 0;
       width: fluid-to-laptop(20, 16);
       height: 2.5px;

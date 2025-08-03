@@ -18,7 +18,7 @@
     }
   }
 
-  &.is-fixed{
+  &.is-fixed {
     position: fixed;
   }
 
@@ -57,12 +57,12 @@
       display: flex;
 
       @starting-style {
-        @include starting-style ;
+        @include starting-style;
       }
     }
 
     &:not([open]) {
-      @include starting-style ;
+      @include starting-style;
     }
   }
 

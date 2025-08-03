@@ -1,22 +1,17 @@
-import './TabsNavigation.scss'
-import getIdFromTitle from '@/utils/getIdFromTitle'
-import classNames from 'classnames'
-import getTabsElementsIdsFromTitle from '@/components/Tabs/utils/getTabsElementsIdsFromTitle'
+import "./TabsNavigation.scss"
+import getIdFromTitle from "@/utils/getIdFromTitle"
+import classNames from "classnames"
+import getTabsElementsIdsFromTitle from "@/components/Tabs/utils/getTabsElementsIdsFromTitle"
 
 const TabsNavigation = (props) => {
-  const {
-    className,
-    id,
-    title,
-    items = [],
-  } = props
+  const { className, id, title, items = [] } = props
 
   const titleFormatted = getIdFromTitle(title)
   const titleId = `${titleFormatted}-title`
 
   return (
     <div
-      className={classNames(className, 'tabs-navigation')}
+      className={classNames(className, "tabs-navigation")}
       id={id}
       role="tablist"
       aria-labelledby={titleId}
@@ -30,8 +25,8 @@ const TabsNavigation = (props) => {
 
         return (
           <div
-            className={classNames('tabs-navigation__button', {
-              'is-active': item.isActive
+            className={classNames("tabs-navigation__button", {
+              "is-active": item.isActive,
             })}
             id={buttonId}
             aria-controls={contentId}

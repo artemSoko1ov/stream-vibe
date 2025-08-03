@@ -1,5 +1,5 @@
-.icon{
-    --iconSize: #{fluid(28, 24)};
-    @include square(var(--iconSize));
-    display: inline-flex;
+.icon {
+  --iconSize: #{fluid(28, 24)};
+  @include square(var(--iconSize));
+  display: inline-flex;
 }

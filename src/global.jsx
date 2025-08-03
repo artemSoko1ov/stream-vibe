@@ -6,7 +6,7 @@ import Banner from "@/sections/Banner"
 import { Head } from "minista"
 
 export default function (props) {
-  const { children, title, url, isHeaderFixed,} = props
+  const { children, title, url, isHeaderFixed } = props
 
   return (
     <>
@@ -32,8 +32,10 @@ export default function (props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Header url={url} isFixed={isHeaderFixed}/>
-      <Content isResetPaddingTop={isHeaderFixed}>{children} <Banner /></Content>
+      <Header url={url} isFixed={isHeaderFixed} />
+      <Content isResetPaddingTop={isHeaderFixed}>
+        {children} <Banner />
+      </Content>
       <Footer />
     </>
   )

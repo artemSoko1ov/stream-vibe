@@ -1,6 +1,6 @@
-import './SliderNavigation.scss'
-import classNames from 'classnames'
-import Button from '@/components/Button'
+import "./SliderNavigation.scss"
+import classNames from "classnames"
+import Button from "@/components/Button"
 
 const SliderNavigation = (props) => {
   const {
@@ -10,21 +10,21 @@ const SliderNavigation = (props) => {
     /**
      * '' (default) | 'tile' | 'rounded'
      */
-    mode = '',
+    mode = "",
     /**
-     * '' (default) | 'abs-bottom' 
+     * '' (default) | 'abs-bottom'
      */
-    position = '',
+    position = "",
     isHiddenMobile,
-    buttonMode = 'black-10',
+    buttonMode = "black-10",
   } = props
 
   return (
     <div
-      className={classNames(className, 'slider-navigation', {
+      className={classNames(className, "slider-navigation", {
         [`slider-navigation--${mode}`]: mode,
         [`slider-navigation--${position}`]: position,
-        'hidden-mobile': isHiddenMobile,
+        "hidden-mobile": isHiddenMobile,
       })}
       id={id}
       data-js-slider-navigation=""
@@ -36,7 +36,7 @@ const SliderNavigation = (props) => {
         label="Previous slide"
         isLabelHidden
         extraAttrs={{
-          'data-js-slider-previous-button': '',
+          "data-js-slider-previous-button": "",
         }}
       />
       {hasPagination && (
@@ -52,7 +52,7 @@ const SliderNavigation = (props) => {
         label="Next slide"
         isLabelHidden
         extraAttrs={{
-          'data-js-slider-next-button': '',
+          "data-js-slider-next-button": "",
         }}
       />
     </div>

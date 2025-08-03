@@ -14,7 +14,7 @@ class Slider {
         pagination: '[data-js-slider-pagination]',
     }
 
-    constructor(rootElement){
+    constructor(rootElement) {
         this.rootElement = rootElement
         this.swiperElement = this.rootElement.querySelector(this.selectors.swiper)
         this.params = getParams(this.rootElement, this.selectors.root)
@@ -27,7 +27,7 @@ class Slider {
         this.init()
     }
 
-    init(){
+    init() {
         new Swiper(this.swiperElement, {
             ...this.params.sliderParams,
             modules: [Navigation, Pagination],
@@ -45,12 +45,12 @@ class Slider {
 }
 
 class SliderCollection {
-    constructor(){
+    constructor() {
         this.init()
     }
 
-    init(){
-        document.querySelectorAll(rootSelector).forEach((element) =>{
+    init() {
+        document.querySelectorAll(rootSelector).forEach((element) => {
             new Slider(element)
         })
     }

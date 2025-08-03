@@ -10,7 +10,7 @@
 
     &-filled {
       --ratingViewStarsClipEnd: calc(100% / 5 * var(--ratingViewValue));
-        @include abs-cover;
+      @include abs-cover;
 
       clip-path: polygon(
         0 0,

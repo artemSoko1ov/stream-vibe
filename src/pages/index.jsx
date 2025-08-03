@@ -4,15 +4,15 @@ import Devices from "@/sections/Devices"
 import Questions from "@/sections/Questions"
 import Plans from "@/sections/Plans"
 
-export const metadata ={
-  title: 'Home',
+export const metadata = {
+  title: "Home",
   isHeaderFixed: true,
-} 
+}
 
 export default function () {
   return (
     <>
-      <Hero /> 
+      <Hero />
       <Categories />
       <Devices />
       <Questions />

@@ -15,10 +15,10 @@
     }
   }
 
-  &--rounded{
+  &--rounded {
     column-gap: fluid-to-laptop(10, 8);
 
-    .slider-navigation__arrow-button{
+    .slider-navigation__arrow-button {
       border-radius: 50%;
     }
   }

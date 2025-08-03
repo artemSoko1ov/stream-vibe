@@ -12,8 +12,8 @@
   @include mobile {
     grid-template-columns: 1fr auto;
     grid-template-areas:
-      'player number'
-      'body body';
+      "player number"
+      "body body";
     padding: 20px;
     background-color: var(--color-black-08);
     border-radius: var(--border-radius-s);
@@ -41,8 +41,12 @@
     &::before {
       @include abs-cover;
 
-      content: '';
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+      content: "";
+      background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
     }
   }
 
@@ -68,11 +72,7 @@
 
     padding: 0;
     color: var(--color-white);
-    background-color: color-mix(
-      in srgb,
-      var(--color-black) 60%,
-      transparent
-    );
+    background-color: color-mix(in srgb, var(--color-black) 60%, transparent);
     border: none;
     border-radius: 50%;
 

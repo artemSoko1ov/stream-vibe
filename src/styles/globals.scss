@@ -86,12 +86,11 @@ a {
   }
 }
 
-
-:focus-visible{
-    @include focus-visible;
+:focus-visible {
+  @include focus-visible;
 }
 
-:has(.swiper){
+:has(.swiper) {
   min-width: 0;
 }
 

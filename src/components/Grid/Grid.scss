@@ -15,7 +15,7 @@
     @include tablet {
       --gridColumns: 2;
     }
-    
+
     @include mobile {
       --gridColumns: 1;
     }

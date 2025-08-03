@@ -37,7 +37,7 @@
     background-repeat: no-repeat;
 
     padding-top: fluid(195, 150);
-    padding-bottom: fluid(131,50);
+    padding-bottom: fluid(131, 50);
   }
 
   &__play-button {
@@ -48,14 +48,14 @@
     border: none;
   }
 
-  &__title{
+  &__title {
     margin-top: -0.5em;
-    margin-bottom: fluid-to-laptop(14,10);
+    margin-bottom: fluid-to-laptop(14, 10);
   }
-  &__description{
-     margin-bottom: fluid(50,30);
+  &__description {
+    margin-bottom: fluid(50, 30);
   }
-  &__body{
-    padding-bottom: fluid(50,20);
+  &__body {
+    padding-bottom: fluid(50, 20);
   }
 }

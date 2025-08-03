@@ -1,13 +1,8 @@
-import './PersonCard.scss'
-import { Image } from 'minista'
+import "./PersonCard.scss"
+import { Image } from "minista"
 
 const PersonCard = (props) => {
-  const {
-    imgSrc,
-    imgAlt,
-    name,
-    subtitle,
-  } = props
+  const { imgSrc, imgAlt, name, subtitle } = props
 
   const hasBody = Boolean(name || subtitle)
 

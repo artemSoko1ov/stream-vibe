@@ -1,22 +1,14 @@
-import './EpisodeCard.scss'
-import Icon from '@/components/Icon'
+import "./EpisodeCard.scss"
+import Icon from "@/components/Icon"
 
 const EpisodeCard = (props) => {
-  const {
-    number,
-    title,
-    description,
-    duration,
-    video,
-  } = props
+  const { number, title, description, duration, video } = props
 
-  const playButtonTitle = 'Play video'
+  const playButtonTitle = "Play video"
 
   return (
     <div className="episode-card">
-      <div className="episode-card__number">
-        {number}
-      </div>
+      <div className="episode-card__number">{number}</div>
       <div className="episode-card__player" data-js-video-player="">
         <video
           className="episode-card__video"
@@ -33,10 +25,7 @@ const EpisodeCard = (props) => {
           title={playButtonTitle}
           data-js-video-player-play-button=""
         >
-          <Icon
-            className="episode-card__play-button-icon"
-            name="play-circle"
-          />
+          <Icon className="episode-card__play-button-icon" name="play-circle" />
         </button>
       </div>
       <div className="episode-card__body">

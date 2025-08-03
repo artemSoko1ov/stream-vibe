@@ -4,7 +4,16 @@ import "./MovieCard.scss"
 import { Image } from "minista"
 
 const MovieCard = (props) => {
-  const { title, imgSrc, duration, views, released, rating, season, href = "/movie" } = props
+  const {
+    title,
+    imgSrc,
+    duration,
+    views,
+    released,
+    rating,
+    season,
+    href = "/movie",
+  } = props
 
   return (
     <a className="movie-card" href={href} title={title}>
@@ -25,7 +34,7 @@ const MovieCard = (props) => {
         )}
 
         {rating && (
-          <Badge className='movie-card__rating-badge'>
+          <Badge className="movie-card__rating-badge">
             <RatingView {...rating} />
           </Badge>
         )}
@@ -37,8 +46,14 @@ const MovieCard = (props) => {
         )}
 
         {released && (
-          <Badge className='movie-card__released-badge'>
-            Released at <time className="movie-card__released-badge-label" datetime={released.dateTime}>{released.label}</time>
+          <Badge className="movie-card__released-badge">
+            Released at{" "}
+            <time
+              className="movie-card__released-badge-label"
+              datetime={released.dateTime}
+            >
+              {released.label}
+            </time>
           </Badge>
         )}
       </div>

@@ -7,14 +7,14 @@
     }
   }
 
-  &__item{
+  &__item {
     width: auto;
   }
 
-  &__navigation{
+  &__navigation {
     margin-top: fluid(40, 24);
 
-    &.slider-navigation{
+    &.slider-navigation {
       justify-content: center;
     }
   }
@@ -26,9 +26,8 @@
     width: 80px;
     height: 5px;
     background-color: var(--color-black-20);
-    border-radius: 20px;a
-
-    &-drag {
+    border-radius: 20px;
+    a &-drag {
       height: 100%;
       background-color: var(--color-red-45);
       border-radius: inherit;

@@ -1,6 +1,8 @@
 .tabs {
   --tabsBodyRowGap: 0;
   --tabsNonActiveContentDisplay: none;
+  display: grid;
+  row-gap: 20px;
 
   &--enable-only-on-mobile {
     @include mobile-above {
@@ -9,7 +11,7 @@
     }
   }
 
-  &__body{
+  &__body {
     display: grid;
     row-gap: var(--tabsBodyRowGap);
   }

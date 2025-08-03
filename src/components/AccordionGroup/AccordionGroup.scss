@@ -32,21 +32,21 @@
     }
   }
 
-  &--dark{
+  &--dark {
     display: grid;
     row-gap: fluid-to-laptop(20, 16);
 
-    .accordion-group__item{
+    .accordion-group__item {
       padding: fluid(24, 16) fluid(50, 20);
       background-color: var(--color-black-06);
       border: var(--border);
       border-radius: var(--border-radius-l);
 
-      @include laptop{
+      @include laptop {
         border-radius: var(--border-radius-m);
       }
 
-      &::after{
+      &::after {
         display: none;
       }
     }
@@ -72,19 +72,21 @@
       }
     }
 
-    @include tablet{
-        --accordionGroupItemPaddingY: 40px;
-        --accordionGroupItemHalfPaddingY: calc(var(--accordionGroupItemPaddingY) / 2);
+    @include tablet {
+      --accordionGroupItemPaddingY: 40px;
+      --accordionGroupItemHalfPaddingY: calc(
+        var(--accordionGroupItemPaddingY) / 2
+      );
 
-        padding: var(--accordionGroupItemPaddingY) 0;
+      padding: var(--accordionGroupItemPaddingY) 0;
 
-        &:first-child{
-            padding-top: var(--accordionGroupItemHalfPaddingY);
-        }
+      &:first-child {
+        padding-top: var(--accordionGroupItemHalfPaddingY);
+      }
 
-         &:last-child{
-            padding-bottom: var(--accordionGroupItemHalfPaddingY);
-        }
+      &:last-child {
+        padding-bottom: var(--accordionGroupItemHalfPaddingY);
+      }
     }
 
     &:not(:last-child) {

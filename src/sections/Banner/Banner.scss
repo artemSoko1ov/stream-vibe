@@ -25,7 +25,7 @@
       text-align: center;
     }
 
-    @include mobile {
+    @include mobile-s {
       background: url("/src/assets/images/banner/bg-mobile.png");
       background-repeat: no-repeat;
       background-position: center;
@@ -36,5 +36,9 @@
   &__body {
     display: grid;
     row-gap: fluid-to-laptop(14, 10);
+  }
+
+  &__button {
+    flex-shrink: 0;
   }
 }

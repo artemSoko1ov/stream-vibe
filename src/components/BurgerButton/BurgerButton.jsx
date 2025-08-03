@@ -2,10 +2,7 @@ import classNames from "classnames"
 import "./BurgerButton.scss"
 
 const BurgerButton = (props) => {
-  const { 
-    className,
-    extraAttrs,
-   } = props
+  const { className, extraAttrs } = props
   const title = "Open menu"
   return (
     <button

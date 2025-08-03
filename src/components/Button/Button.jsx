@@ -1,4 +1,4 @@
-import Icon from '@/components/Icon'
+import Icon from "@/components/Icon"
 import "./Button.scss"
 import classNames from "classnames"
 
@@ -9,7 +9,7 @@ const Button = (props) => {
     href,
     target,
     // default | transparent | 'black-10' | 'black-08' | 'black-06'
-    mode='',
+    mode = "",
     label,
     isLabelHidden = false,
     iconName,
@@ -26,7 +26,7 @@ const Button = (props) => {
   const specificProps = isLink ? linkProps : buttonProps
   const title = isLabelHidden ? label : undefined
   const iconComponent = iconName && (
-    <Icon className="button__icon" name={iconName} hasFill={hasFillIcon}/>
+    <Icon className="button__icon" name={iconName} hasFill={hasFillIcon} />
   )
 
   return (
@@ -40,9 +40,7 @@ const Button = (props) => {
       {...extraAttrs}
     >
       {iconPosition === "before" && iconComponent}
-      {!isLabelHidden && (
-        <span className="button__label">{label}</span>
-        )}
+      {!isLabelHidden && <span className="button__label">{label}</span>}
       {iconPosition === "after" && iconComponent}
     </Component>
   )
